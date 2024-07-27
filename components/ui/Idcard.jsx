@@ -30,7 +30,7 @@ export default function Idcard() {
   return (
     <>
       <div className="w-5/6 max-lg:w-full lg:h-screen h-[70vh]">
-        <Canvas camerq={{ position: [0, 0, 13], fov: 30 }}>
+        <Canvas camera={{ position: [0, 0, 13], fov: 30 }}>
           <ambientLight intensity={Math.PI} />
           <Physics interpolate gravity={[0, -40, 0]} timeStep={1 / 60}>
             <Band />

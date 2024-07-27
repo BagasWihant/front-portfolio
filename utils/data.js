@@ -1,0 +1,38 @@
+export const projects = [
+    {
+      id: 1,
+      title: "The Inside Scoop",
+      description: "The Inside Scoop",
+      img: "https://images.unsplash.com/photo-1661565882777-5c132e11167f",
+      stack: "ReactJS, NextJS, Tailwind, Vercel",
+      link: "https://inside-scoop.vercel.app/",
+      github: "https://github.com/inside-scoop/inside-scoop",
+    },
+    {
+      id: 2,
+      title: "TITLE @",
+      description: "description",
+      img: "https://images.unsplash.com/photo-1720912065328-e6d77240be96",
+      stack: "ReactJS, NextJS, Tailwind, Vercel",
+      link: "https://inside-scoop.vercel.app/",
+      github: "https://github.com/inside-scoop/inside-scoop",
+    },
+    {
+      id: 3,
+      title: "TITLE @",
+      description: "description",
+      img: "https://images.unsplash.com/photo-1720912065328-e6d77240be96",
+      stack: "ReactJS, NextJS, Tailwind, Vercel",
+      link: "https://inside-scoop.vercel.app/",
+      github: "https://github.com/inside-scoop/inside-scoop",
+    },
+    {
+      id: 4,
+      title: "TITLE @",
+      description: "description",
+      img: "https://images.unsplash.com/photo-1720912065328-e6d77240be96",
+      stack: "ReactJS, NextJS, Tailwind, Vercel",
+      link: "https://inside-scoop.vercel.app/",
+      github: "https://github.com/inside-scoop/inside-scoop",
+    },
+  ];

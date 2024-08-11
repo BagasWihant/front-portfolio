@@ -7,7 +7,7 @@ import { FlipWords } from "./ui/flip-words";
 import { CardBody, CardContainer, CardItem } from "./ui/3d-card";
 import { Meteors } from "./ui/meteor";
 
-export function About() {
+export const About = ({text}) => {
   const words = [
     "Hello i'am Bagas Wihantoro.",
     "I live in Boyolali.",
@@ -29,14 +29,7 @@ export function About() {
               <div className="font-normal text-start text-neutral-600 dark:text-neutral-400">
                 <FlipWords className="md:text-4xl text-2xl" words={words} /> <br />
                 <span className="text-lg">
-                  I graduated from Amikom Surakarta in 2021 and have been thriving in the web development world ever since.
-                  And i have created several projects both for personal and for companies.
-                  <br />
-
-                  <br />
-                  I have a passion for creating functional
-                  websites. I am always looking for new and exciting projects.
-
+                  {text.description_id}
                 </span>
               </div>
             </div>

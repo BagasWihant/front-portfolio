@@ -6,13 +6,14 @@ import { CardBody, CardContainer, CardItem } from "./ui/3d-card";
 import Link from "next/link";
 import {  projects } from "@/utils/data";
 
-const Project = () => {
+const Project = ({project}) => {
+  console.log(project)
   return (
     <div className="min-h-screen flex flex-col justify-center items-center  ">
         <h4 className="text-3xl font-bold py-5 sticky top-0 h-full">Little Project</h4>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mx-auto place-content-center justify-center">
-        {projects.map(
-          ({ id, title, description, img, stack, link, github }, i) => (
+        {project.map(
+          ({ id, title, description, img, stack, demo_url, github }, i) => (
             <div className="w-full" key={id}>
               <CardContainer className="inter-var" numberX={-10} numberY={-5}>
                 <CardBody className="bg-gray-50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border  ">
@@ -36,7 +37,7 @@ const Project = () => {
                     className="w-full mt-4"
                   >
                     <Image
-                      src={img}
+                      src={`https://admin-portfolio.wihant.com/${img}`} //${img}
                       height="1000"
                       width="1000"
                       className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
@@ -56,10 +57,10 @@ const Project = () => {
                       translateZ={20}
                       translateX={40}
                       as={Link}
-                      href={link}
+                      href={demo_url}
                       className="px-4 py-2 rounded-xl bg-black dark:bg-white dark:text-black text-white text-xs font-bold"
                     >
-                      {link}
+                      Demo Url
                     </CardItem>
                   </div>
                 </CardBody>

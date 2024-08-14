@@ -6,7 +6,7 @@ import next from "next";
 
 HeroSection
 const getapi = async () => {
-  const res = await fetch("https://admin-portfolio.wihant.com/api/getDataPortfolio",{next: {revalidate: 10}});
+  const res = await fetch("https://admin-portfolio.wihant.com/api/getDataPortfolio");
     if(!res.ok) {
       throw new Error("Failed to fetch data");
     }

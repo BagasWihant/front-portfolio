@@ -19,7 +19,7 @@ export default async function Home() {
      <HeroSection text={data?.text[0]} />  
      <About text={data?.text[0]} />
      <Project project={data?.project} />
-     <Contact  />
+     <Contact text={data?.text[0]} />
     </main>
   );
 }

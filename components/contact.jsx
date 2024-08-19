@@ -10,7 +10,7 @@ import { CardBorder } from "./ui/moving-border";
 
 const Contact = ({ text }) => {
   return (
-    <div className="min-h-screen flex justify-center items-center max-md:mt-7">
+    <div className="min-h-screen flex justify-center items-center max-md:mt-7 w-full px-2">
       <CardBorder
         duration={5068}
         containerClassName="w-full"

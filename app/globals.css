@@ -1,5 +1,152 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+/* From Uiverse.io by vinodjangid07 */
+.card-sosmed {
+  position: relative;
+  width: 100%;
+  background: lightgrey;
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  transition: all 1s ease-in-out;
+  border: 2px solid rgb(255, 255, 255);
+}
 
+.background-sosmed {
+  position: absolute;
+  inset: 0;
+  background-color: #4158d0;
+  /* background-image: linear-gradient(
+    43deg,
+    #4158d0 0%,
+    #c850c0 46%,
+    #ffcc70 100%
+  ); */
+}
 
+.logo-sosmed {
+  position: absolute;
+  right: 50%;
+  bottom: 50%;
+  transform: translate(50%, 50%);
+  transition: all 0.6s ease-in-out;
+  font-size: 1.3em;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.logo-sosmed .logo-svg {
+  fill: white;
+  width: 30px;
+  height: 30px;
+}
+
+.icon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+}
+
+.icon .svg {
+  fill: rgba(255, 255, 255, 0.797);
+  width: 100%;
+  transition: all 0.5s ease-in-out;
+}
+
+.box {
+  position: absolute;
+  padding: 10px;
+  text-align: right;
+  background: rgba(255, 255, 255, 0.389);
+  border-top: 2px solid rgb(255, 255, 255);
+  border-right: 1px solid white;
+  border-radius: 10% 13% 42% 0%/10% 12% 75% 0%;
+  box-shadow: rgba(100, 100, 111, 0.364) -7px 7px 29px 0px;
+  transform-origin: bottom left;
+  transition: all 1s ease-in-out;
+}
+
+.box::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+
+.box:hover .svg {
+  fill: white;
+}
+
+.box1 {
+  width: 70%;
+  height: 70%;
+  bottom: -70%;
+  left: -70%;
+}
+
+.box1::before {
+  background: radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #ff53d4 60%,
+    #62c2fe 90%
+  );
+}
+
+.box1:hover::before {
+  @apply opacity-100;
+}
+
+.box1:hover .icon .svg {
+  filter: drop-shadow(0 0 5px white);
+}
+
+.box2 {
+  @apply w-6/12 h-3/6 delay-[0.2s] -left-2/4 -bottom-2/4 hover:before:opacity-100;
+}
+
+.box2::before {
+  background: radial-gradient(circle at 30% 107%, #91e9ff 0%, #00acee 90%);
+}
+
+.box2:hover::before {
+  opacity: 1;
+}
+
+.box2:hover .icon .svg {
+  filter: drop-shadow(0 0 5px white);
+}
+
+.box3 {
+  @apply w-[30%] h-[30%] bottom-[-30%] left-[-30%] delay-[0.4s] hover:before:opacity-100;
+}
+
+.box3::before {
+  background: radial-gradient(circle at 30% 107%, #969fff 0%, #b349ff 90%);
+}
+
+.box3:hover::before {
+  opacity: 1;
+}
+
+.box3:hover .icon .svg {
+  filter: drop-shadow(0 0 5px white);
+}
+
+.box4 {
+  @apply w-[10%] h-[10%] bottom-[-10%] left-[-10%] delay-[0.6s];
+}
+.card-sosmed:hover {
+  @apply scale-110;
+}
+.card-sosmed:hover .box {
+  @apply -left-px -bottom-px;
+}
+
+.card-sosmed:hover .logo-sosmed {
+  @apply translate-x-[100px] translate-y-[-62px] md:translate-x-[150px] md:translate-y-[-132px] lg:translate-x-[220px] tracking-[0px];
+}

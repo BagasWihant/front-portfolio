@@ -10,7 +10,7 @@ const Project = ({ project }) => {
   return (
     <div className="min-h-screen flex flex-col justify-center items-center max-md:px-7">
       <h4 className="text-3xl font-bold py-5 sticky top-0 h-full">
-        Little Project
+        Project
       </h4>
       <div className="flex justify-center flex-wrap gap-5">
         {project.map(

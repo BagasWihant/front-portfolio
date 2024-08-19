@@ -14,7 +14,7 @@ export const About = ({text}) => {
   ];
   return (
     <>
-      <div className="h-screen flex justify-center items-center max-w-7xl">
+      <div className="min-h-screen flex justify-center items-center max-w-7xl">
         <CardBorder
           duration={8651}
           containerClassName="w-full"

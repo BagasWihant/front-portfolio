@@ -15,8 +15,7 @@ const Project = ({ project }) => {
       <div className="flex justify-center flex-wrap gap-5">
         {project.map(
           ({ id, name, description, img, stacks, demo_url, github_url }, i) => (
-            <div className="" key={id}>
-              <CardContainer className="inter-var" numberX={-10} numberY={-5}>
+              <CardContainer className="flex-1" numberX={-10} numberY={-5}  key={id}>
                 <CardBody className="bg-gray-50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border  ">
                   <CardItem
                     translateZ="50"
@@ -40,7 +39,7 @@ const Project = ({ project }) => {
                       loading="eager"
                     />
                   </CardItem>
-
+            <div className="flex flex-1">
                   <CardItem
                     as="p"
                     translateZ="60"
@@ -48,6 +47,7 @@ const Project = ({ project }) => {
                   >
                     {description}
                   </CardItem>
+            </div>
                   <div className="flex flex-row items-center justify-center w-full my-3 z-50">
                     <AnimatedTooltip key={id} items={stacks} />
                   </div>
@@ -81,7 +81,6 @@ const Project = ({ project }) => {
                   </CardItem>
                 </CardBody>
               </CardContainer>
-            </div>
           )
         )}
       </div>

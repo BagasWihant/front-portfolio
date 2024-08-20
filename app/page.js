@@ -6,7 +6,7 @@ import next from "next";
 
 HeroSection
 const getapi = async () => {
-  const res = await fetch(`${process.env.API_URL}/api/getDataPortfolio`);
+  const res = await fetch(`${process.env.API_URL}/api/getDataPortfolio`,{next: {revalidate: 10}});
     if(!res.ok) {
       throw new Error("Failed to fetch data");
     }

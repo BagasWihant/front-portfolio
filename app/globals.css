@@ -5,18 +5,17 @@
 .card-sosmed {
   position: relative;
   width: 100%;
-  background: lightgrey;
   border-radius: 30px;
   overflow: hidden;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   transition: all 1s ease-in-out;
-  border: 2px solid rgb(255, 255, 255);
+  border: 1px solid rgb(255, 255, 255);
 }
 
 .background-sosmed {
   position: absolute;
   inset: 0;
-  background-color: #4158d0;
+  opacity: 0;
   /* background-image: linear-gradient(
     43deg,
     #4158d0 0%,
@@ -81,21 +80,15 @@
 }
 
 .box1 {
-  width: 70%;
-  height: 70%;
-  bottom: -70%;
-  left: -70%;
+  width: 75%;
+  height: 75%;
+  bottom: -75%;
+  left: -75%;
+}
+.box1::before {
+  background: radial-gradient(circle at 30% 107%, #91ceff 0%, #0083ee 90%);
 }
 
-.box1::before {
-  background: radial-gradient(
-    circle at 30% 107%,
-    #fdf497 0%,
-    #fdf497 5%,
-    #ff53d4 60%,
-    #62c2fe 90%
-  );
-}
 
 .box1:hover::before {
   @apply opacity-100;
@@ -106,11 +99,18 @@
 }
 
 .box2 {
-  @apply w-6/12 h-3/6 delay-[0.2s] -left-2/4 -bottom-2/4 hover:before:opacity-100;
+  @apply w-[58%] h-[58%] delay-[0.2s] -left-[58%] -bottom-[58%] hover:before:opacity-100;
 }
 
+
 .box2::before {
-  background: radial-gradient(circle at 30% 107%, #91e9ff 0%, #00acee 90%);
+  background: radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #ff53d4 60%,
+    #62c2fe 90%
+  );
 }
 
 .box2:hover::before {
@@ -122,11 +122,11 @@
 }
 
 .box3 {
-  @apply w-[30%] h-[30%] bottom-[-30%] left-[-30%] delay-[0.4s] hover:before:opacity-100;
+  @apply w-[40%] h-[40%] bottom-[-40%] left-[-40%] delay-[0.4s] hover:before:opacity-100;
 }
 
 .box3::before {
-  background: radial-gradient(circle at 30% 107%, #969fff 0%, #b349ff 90%);
+  background: radial-gradient(circle at 30% 107%, #525252 0%,#616161 30%, #0d0d0e 90%);
 }
 
 .box3:hover::before {
@@ -138,7 +138,16 @@
 }
 
 .box4 {
-  @apply w-[10%] h-[10%] bottom-[-10%] left-[-10%] delay-[0.6s];
+  @apply w-[20%] h-[20%] bottom-[-20%] left-[-20%] delay-[0.6s];
+}
+.box4::before {
+  background: radial-gradient(circle at 30% 107%, #91ceff 0%, #0083ee 90%);
+}
+.box4:hover::before {
+  opacity: 1;
+}
+.box4:hover .icon .svg {
+  filter: drop-shadow(0 0 5px white);
 }
 .card-sosmed:hover {
   @apply scale-110;
@@ -148,5 +157,5 @@
 }
 
 .card-sosmed:hover .logo-sosmed {
-  @apply translate-x-[100px] translate-y-[-62px] md:translate-x-[150px] md:translate-y-[-132px] lg:translate-x-[220px] tracking-[0px];
+  @apply translate-x-[100px] translate-y-[-90px] md:translate-x-[96px] md:translate-y-[-132px] lg:translate-y-[-180px] lg:translate-x-[110px] tracking-[0px];
 }

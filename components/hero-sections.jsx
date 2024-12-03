@@ -6,6 +6,15 @@ import { AuroraBackground } from "./ui/aurora-backgrounds";
 import Idcard from "./ui/Idcard";
 
 export const HeroSection = ({ text }) => {
+  const download = () => {
+    const pdfUrl = "https://drive.google.com/file/d/1f6xvZ7X2ONdlYBKmSMMaDc8U5mdqbTQ_/view?usp=sharing";
+    const link = document.createElement("a");
+    link.href = pdfUrl;
+    link.download = "Bagas Wihantoro CV.pdf"; // specify the filename
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+};
   return (
     <AuroraBackground
       className={
@@ -29,7 +38,7 @@ export const HeroSection = ({ text }) => {
         <div className="font-extralight text-base md:text-4xl  py-4">
           {text.sub_title_id}
         </div>
-        <button className="bg-black  rounded-full w-fit text-white  px-4 py-2">
+        <button className="bg-black  rounded-full w-fit text-white  px-4 py-2" onClick={download}>
           {text.small_sub_title_id}
         </button>
       </motion.div>

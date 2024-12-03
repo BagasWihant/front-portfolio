@@ -7,6 +7,8 @@ import Idcard from "./ui/Idcard";
 
 export const HeroSection = ({ text }) => {
   const download = () => {
+    console.log('clicked');
+    
     const pdfUrl = "https://drive.google.com/file/d/1f6xvZ7X2ONdlYBKmSMMaDc8U5mdqbTQ_/view?usp=sharing";
     const link = document.createElement("a");
     link.href = pdfUrl;
